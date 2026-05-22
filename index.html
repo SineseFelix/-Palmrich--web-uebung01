@@ -8,17 +8,14 @@
 
 <body style="background-color: lightblue;">
 
-   
     <h1>Felix Palmrich – 6R</h1>
 
-   
     <h2>Persönliche Daten</h2>
 
     <p>
         Geburtsdatum: 12.08.2009 <br>
         Lieblingsfarbe: Schwarz
     </p>
-
 
     <h2>Meine Lieblingsfächer</h2>
 
@@ -28,20 +25,29 @@
         <li>Mathematik</li>
     </ol>
 
-    <!-- Hobbys -->
     <h2>Meine Hobbys</h2>
 
-    <ul id="liste-hobbys">
-        <!-- Wird später mit JavaScript gefüllt -->
-    </ul>
+    <ul id="liste-hobbys"></ul>
 
-    <!-- Freies Bild -->
     <h2>Freies Bild</h2>
 
     <figure>
         <img src="bild.jpg" alt="Mein Bild" width="300">
         <figcaption>Beschreibung meines Bildes</figcaption>
     </figure>
+
+
+    <script>
+        const hobbys = ["Gaming", "Schwimmen", "Programmieren", "Felix Palmrich"];
+
+        const liste = document.getElementById("liste-hobbys");
+
+        hobbys.forEach(h => {
+            let li = document.createElement("li");
+            li.textContent = h;
+            liste.appendChild(li);
+        });
+    </script>
 
 </body>
 </html>
